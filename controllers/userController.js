@@ -13,19 +13,19 @@ export const sendMail = catchAsyncError(async (req, res, next) => {
     port: process.env.SMTP_PORT,
     secure: true,
     auth: {
-      user: "testing@coworktown.com",
+      user: "sales@coworktown.com",
       pass: "Bsmr@1986",
     },
   });
 
   await transporter.sendMail({
-    from: "testing@coworktown.com",
+    from: "sales@coworktown.com",
     to,
     subject,
     html: text,
   });
   await transporter.sendMail({
-    from: "testing@coworktown.com",
+    from: "sales@coworktown.com",
     to: "coworktown99@gmail.com",
     subject,
     html: text,
