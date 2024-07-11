@@ -20,7 +20,7 @@ export const sendMail = catchAsyncError(async (req, res, next) => {
 
   await transporter.sendMail({
     from: "sales@coworktown.com",
-    to,
+    to: "sales@coworktown.com",
     subject,
     html: text,
   });
